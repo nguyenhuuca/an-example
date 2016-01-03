@@ -14,7 +14,7 @@
 	    <tbody>
 	    	<tr ng-repeat = "student1 in studentListCtrl.studentList">
 	    		
-	    		<td><a ui-sref="student.manage({ selectedStudent: student1.firstName })")>{{student1.firstName}} </a></td>
+	    		<td><a ui-sref="student.manage({ selectedStudent: {firstName:student1.firstName, lastName:student1.lastName}})")>{{student1.firstName}} </a></td>
 	    		
 	    		<td>{{student1.lastName}}</td>
 	    		

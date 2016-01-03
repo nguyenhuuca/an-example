@@ -32,6 +32,10 @@
 		console.log($stateParams.selectedStudent);
 		var ctrl = this;
 		ctrl.student = new StudentDO();
-		ctrl.student.firstName = $stateParams.selectedStudent;
+		if($stateParams.selectedStudent){
+			ctrl.student.firstName = $stateParams.selectedStudent.firstName;
+			ctrl.student.lastName = $stateParams.selectedStudent.lastName;	
+		}
+		
 	}
 } (jQuery));
