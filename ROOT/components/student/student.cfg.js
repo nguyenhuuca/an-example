@@ -8,22 +8,27 @@
 			
 	function homeConfig($stateProvider, $urlRouterProvider) {
 		$stateProvider
-			.state('student.list', {
-				vie
-				url: '/list',
-				templateUrl: 'components/student/student-list.tpl.html',
-				controller: 'example.student.StudentListCtrl',
-				controllerAs: 'studentListCtrl'
-			})
-			.state('student.edit', {
-				url: '/edit',
+			.state('student.manage', {
+				url: '/manage',
 				params: {
-					selectedStudent: null
+							selectedStudent: null
+						},
+				views:{
+					'studentList':{
+						templateUrl: 'components/student/student-list.tpl.html',	
+						controller: 'example.student.StudentListCtrl',
+						controllerAs: 'studentListCtrl'	
+					},
+					'studentEdit':{
+						
+						templateUrl: 'components/student/student-edit.html',
+						controller: 'example.student.StudentEditCtrl',
+						controllerAs: 'studentEditCtrl'
+					}
 				}
-				templateUrl: 'components/student/student-list.tpl.html',
-				controller: 'example.student.StudentListCtrl',
-				controllerAs: 'studentListCtrl'
-			});
+				
+			})
+			
 			
 	}
 	

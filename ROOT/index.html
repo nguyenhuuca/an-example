@@ -7,11 +7,14 @@
 
 		<!-- CSS (load bootstrap) -->
 		<!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" href="assets/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" >
+		<link rel="stylesheet" href="css/style.css">
 
 		<style>
 			.navbar { border-radius:0; }
 		</style>
+
 
 		<script src = "assets/js/jquery-1.11.3.min.js"></script>
 		<script src = "assets/js/angularJS/angular.js"></script>
@@ -24,6 +27,21 @@
 			background: red;
 		}*/
 		</style>
+		
+
+		<script src="app.mdl.js"></script>
+		<!--script src="app.srv.js"></script-->
+		<script src="app.cfg.js"></script>
+		
+		<script src="components/home/home.mdl.js"></script>
+		<script src="components/home/home.ctrl.js"></script>
+		<script src="components/home/home.cfg.js"></script>
+		
+		<script src="components/student/student.mdl.js"></script>
+		<script src="components/student/student.ctrl.js"></script>
+		<script src="components/student/student.cfg.js"></script>
+		<script src="components/student/student.val.js"></script>
+		<script src="components/student/student.srv.js"></script>
    </head>
    
    <body ng-app="example"> <!-- apply our angular app to our site -->
@@ -48,16 +66,6 @@
 			</div>
 		</div>
       
-		<script src="app.mdl.js"></script>
-		<!--script src="app.srv.js"></script-->
-		<script src="app.cfg.js"></script>
 		
-		<script src="components/home/home.mdl.js"></script>
-		<script src="components/home/home.ctrl.js"></script>
-		<script src="components/home/home.cfg.js"></script>
-		
-		<script src="components/student/student.mdl.js"></script>
-		<script src="components/student/student.ctrl.js"></script>
-		<script src="components/student/student.cfg.js"></script>
    </body>
 </html>

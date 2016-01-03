@@ -7,5 +7,6 @@
 				'ngCookies', 
 				'ngResource', 
 				'ui.router',
-				'example.home']); // define a new application module 
+				'example.home',
+				'example.student']); // define a new application module 
 } (jQuery));
