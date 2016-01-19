@@ -14,8 +14,8 @@
 		ctrl.testS  ="hello";
 	}
 	
-	StudentListController.$inject = ['$scope', '$stateParams','studentService'];
-	function StudentListController($scope, $stateParams,studentService) {
+	StudentListController.$inject = ['$scope', '$stateParams','$state','studentService'];
+	function StudentListController($scope, $stateParams,$state,studentService) {
 		//$scope.students = 
 		var ctrl = this;
 		ctrl.studentList = null;
@@ -23,6 +23,11 @@
 			console.log(students);
 			ctrl.studentList = students;
 		});
+		
+		ctrl.selected = function($index) {
+			var student1= ctrl.studentList[$index];
+			$state.transitionTo('.manage','{selectedStudent: {firstName:student1.firstName, lastName:student1.lastName}}');
+		}
 		
 		
 	}
