@@ -7,14 +7,14 @@
 			.factory('studentService', studentService); // add a SecurityService to the application module
 			
 	//securityService.$inject = ['$cookies', '$resource'];
-	function studentService($cookies, $resource,$http) {
+	function studentService($cookies, $resource,$http,ajaxService) {
 		var stService = {
 			getStudentList:getStudentList
 		};
 		return stService;
 
 		function getStudentList(){
-			return $http.get('components/student/data/studentlist.json').then(function(data){
+			return ajaxService.get('components/student/data/studentlist.json',null,{}).then(function(data){
 				console.log(data.data.students);
 				return data.data.students;
 			});

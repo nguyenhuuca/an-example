@@ -28,11 +28,11 @@
 			});
 			
 		// if none of the above states are matched, use this as the fallback
-		$urlRouterProvider.otherwise('/home'); // It means default to 'home' state
+		//$urlRouterProvider.otherwise('/home'); // It means default to 'home' state
 	}
 	
 	function appInitialization($rootScope, $state) {
-		
+		//$state.go('student');
 	}
 	
 	function loadStudents() {

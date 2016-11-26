@@ -1,4 +1,4 @@
-(function(window){
+(function(jq){
 	var networkServices = angular.module('share.networkServices',[]);
 	networkServices.factory('ajaxService',ajaxService);
 	networkServices.$inject = ['$http'];
@@ -8,17 +8,17 @@
 			headers:{
 				'Accept': 'application/json',
 				'requestType':'angularJS',
-				'Cache-Control:' 'no-cach, no-store, must-revalidate',
+				'Cache-Control': 'no-cach, no-store, must-revalidate',
 				'Pragame':'no-catch',
 				'Expries': 0,
 				action: '',
 			},
-			paarams:{}
+			params:{}
 		};
 
 		var ajaxService = {
-			get:get;
-			post:post;
+			get:get,
+			post:post
 		};
 
 		return ajaxService;
@@ -41,4 +41,4 @@
 		}
 	}
 
-}(window)
+}(jQuery))
